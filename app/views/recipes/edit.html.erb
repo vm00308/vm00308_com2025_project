@@ -1,0 +1,28 @@
+<div class = "text-center recipe-title"> <h1 class="display-4"> Edit this Recipe </h1> </div>
+
+<% if @recipe.errors.any? %>
+<h2> The following errors prevented the recipe from being created! </h2>
+    <ul>
+        <% @recipe.errors.full_messages.each do |msg| %>
+            <li> <%= msg %> </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @recipe do |r| %>
+    <p>
+        <%= r.label :name %>
+        <br>
+        <%= r.text_field :name %>
+    </p>
+    <p>
+        <%= r.label :description %>
+        <br>
+        <%= r.text_area :description %>
+    </p>
+    <p>
+        <%= r.submit %>
+    </p>
+<% end %>
+
+<%= link_to "Back to Recipe List", recipes_path %>

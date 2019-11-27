@@ -1,0 +1,21 @@
+<div class = "text-center recipe-title"> <h1 class="display-3"> Listing all Recipes </h1> </div>
+
+
+<p> <%= link_to "Create new recipe", new_recipe_path %> </p>
+
+<table>
+    <tr>
+        <th>Name:   </th>
+        <th>Description </th>
+    </tr>
+
+    <% @all_recipes.each do |recipe| %>
+    <tr>
+        <td><%= recipe.name %> </td>
+        <td><%= recipe.description %> </td>
+        <td><%= link_to 'Show this recipe', recipe_path(recipe) %> </td>
+        <td><%= link_to 'Edit this recipe', edit_recipe_path(recipe) %> </td>
+    </tr>
+    <% end %>
+
+</table>
