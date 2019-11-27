@@ -14,6 +14,10 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+.all-page-color {
+    background-color: wheat;
+}
+
 .jumbotron {
     margin-top: 20px;
     background-image: url("https://i.pinimg.com/originals/3b/fe/5f/3bfe5f4b00c1b1d4606b8c07b2354cef.jpg");
@@ -58,4 +62,9 @@
 
 .description-wrap {
     word-wrap: break-word
+}
+
+.main-page-image {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
