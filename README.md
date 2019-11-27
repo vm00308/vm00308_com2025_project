@@ -1,4 +1,4 @@
-Web App Name: WishList Site
+Web App Name: RecipeList
 
 Author: vm00308
 
