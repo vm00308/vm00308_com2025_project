@@ -1,24 +1,15 @@
-# README
+Web App Name: WishList Site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Author: vm00308
 
-Things you may want to cover:
+Idea: ADD LATER!!!
 
-* Ruby version
+Ruby Version: ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
 
-* System dependencies
+Rails Version: Rails 6.0.1
 
-* Configuration
+Git Version: git version 2.22.0.windows.1
 
-* Database creation
+Heroku Version: heroku/7.35.0 win32-x64 node-v12.13.0
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+HerokuApp Link: https://vm00308-com2025-project.herokuapp.com/
