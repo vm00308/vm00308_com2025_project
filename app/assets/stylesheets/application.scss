@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+.jumbotron {
+    margin-top: 20px;
+    background-image: url("https://i.pinimg.com/originals/3b/fe/5f/3bfe5f4b00c1b1d4606b8c07b2354cef.jpg");
+    background-size: cover;
+    height: 250px;
+    font-weight: bold;
+    color: floralwhite;
+}
+
+#navbar_logo {
+    font-size: 35px;
+    font-weight: 550;
+    letter-spacing: -1px;
+}
+
+#navbar_logo:hover {
+   color: firebrick;
+   text-decoration: none;
+}
+
+
+.nav-custom-link {
+   font-size: 20px;
+   letter-spacing: -1px;
+   text-decoration: none;
+}
+
+.nav-custom-link:hover {
+   color: firebrick;
+   text-decoration: none;
+}
+
+.footer-custom {
+   background: rgb(7, 31, 61);
+   color:white;
+}
