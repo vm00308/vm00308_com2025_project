@@ -1,0 +1,18 @@
+<div class="container-fluid text-center">
+    <h1 class="display-3"> Welcome to <%= @user.username %>'s page! </h1>
+    <br>
+    <h1 class="display-4"><span class="badge badge-info"><%= @user.username %></span></h1>
+    <br>
+</div>
+
+<div class="gravatar_logo">
+    <%= gravatar_for @user %>
+</div>
+
+<br>
+
+<div class="container-fluid text-center">
+    <h4> <%= @user.username %>'s <%= pluralize(@user.recipes.count, "recipe") %> </h4>
+</div>
+
+<%= render 'recipes/recipe', obj: @user.recipes %>
