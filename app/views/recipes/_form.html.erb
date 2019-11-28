@@ -1,27 +1,15 @@
-<% if @recipe.errors.any? %>
-<h2> The following errors prevented the recipe from being created! </h2>
-    <ul>
-        <% @recipe.errors.full_messages.each do |msg| %>
-            <li> <%= msg %> </li>
-        <% end %>
-    </ul>
-<% end %>
-
-
-
-
-
-
+<%= render 'shared/error_messages', obj: @recipe %>
+<br>
 <div class = "container-fluid row">
     <div class = "col-md-12">
-        <%= form_for(@recipe, :html => {class: "form-horizontal", role: "form"}) do |r| %>
+        <%= form_for(@recipe, :html => {role: "form"}) do |r| %>
             <div class = "form-group">
                 <div class = "control-label col-md-2"> <%= r.label :name %> </div>
                 <div class = "col-md-10"> <%= r.text_field :name, class: "form-control", placeholder: "Recipe Name", autofocus: true %> </div>
             </div>
             <div class = "form-group">
                 <div class = "control-label col-md-2"> <%= r.label :description %> </div>
-                <div class = "col-md-10"> <%= r.text_area :description, rows: 10,  class: "form-control", placeholder: "Recipe Description" %> </div>
+                <div class = "col-md-10"> <%= r.text_area :description, rows: 30,  class: "form-control", placeholder: "Recipe Description" %> </div>
             </div>
             <div class = "form-group">
                 <div class = "col-md-10"> <%= r.submit class: 'btn btn-outline-primary btn-lg' %> </div>
@@ -30,8 +18,4 @@
     </div>
 </div>
 
-
-
-
-
-<div class = "text-center"> | <%= link_to "Cancel and return to recipes list", recipes_path %> | </div>
+<div class = "text-center form-cancel-custom"> <h4> |  <%= link_to "Cancel and return to recipes list", recipes_path %> | </h4> </div>

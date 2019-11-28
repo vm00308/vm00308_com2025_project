@@ -15,45 +15,58 @@
 @import "bootstrap";
 
 .all-page-color {
-    background-color: wheat;
+    background-color: floralwhite;
 }
 
 .jumbotron {
-    margin-top: 20px;
-    background-image: url("https://i.pinimg.com/originals/3b/fe/5f/3bfe5f4b00c1b1d4606b8c07b2354cef.jpg");
+    background-color: floralwhite;
     background-size: cover;
-    height: 250px;
-    font-weight: bold;
-    color: floralwhite;
+    height: 400px;
+    color: black;
 }
 
 #navbar_logo {
+    font-style: italic;
     font-size: 35px;
     font-weight: 550;
     letter-spacing: -1px;
 }
 
 #navbar_logo:hover {
-   color: firebrick;
+   color: #d12e3e;
    text-decoration: none;
 }
 
 
 .nav-custom-link {
+   padding-left: 10px;
+   color: #5671f7;
    font-size: 20px;
    letter-spacing: -1px;
    text-decoration: none;
 }
 
 .nav-custom-link:hover {
-   color: firebrick;
+   color: #7a90ff;
    text-decoration: none;
 }
 
 .footer-custom {
-   background: rgb(7, 31, 61);
-   color:white;
+   background: #FFA67A;
 }
+
+.footer-copy-custom {
+    padding-left: 7px;
+    color: black;
+    font-style: italic;
+    font-size: 19px;
+}
+
+.form-cancel-custom {
+    padding-top: 200px;
+    font-style: italic;
+}
+
 
 .recipe-title{
     padding-top: 15px;
@@ -61,10 +74,43 @@
 }
 
 .description-wrap {
-    word-wrap: break-word
+    border-top: 1.5px solid #ffcc66;
+    padding-top: 15px;
+    word-wrap: break-word;
+    border-bottom: 1.5px solid #ffcc66;
+}
+
+.recipes-list {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 100px; 
+}
+.recipe-list-title {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.recipe-list-body {
+    border-top: 1.5px solid #ffcc66;
+    border-bottom: 1.5px solid #ffcc66;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.recipe-list-actions {
+    padding-top: 20px;
 }
 
 .main-page-image {
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.error-padding-custom {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
