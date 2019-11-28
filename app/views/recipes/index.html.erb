@@ -10,6 +10,9 @@
                     </div>
                     <div class = "recipe-list-body">
                         <%= truncate(recipe.description, length: 75) %>
+                        <div class = "recipe-list-meta">
+                            <small> Created by: <%= recipe.user.username if recipe.user %>, <%= time_ago_in_words(recipe.created_at) %> ago | last updated: <%= time_ago_in_words(recipe.updated_at) %> ago </small>
+                        </div>
                     </div>
                     <div class = "recipe-list-actions">
                         <%= link_to "Show this recipe", recipe_path(recipe), class: "btn btn-dark btn-md" %>
