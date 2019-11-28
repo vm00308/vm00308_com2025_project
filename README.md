@@ -24,4 +24,6 @@ Home page images:
 Bootstrap navbar code (edited by vm00308):
 Found on - https://getbootstrap.com/docs/4.0/components/navbar/
 
+VALID_EMAIL_REGEX: https://www.natashatherobot.com/ruby-email-validation-regex/
+
 Gravatar
