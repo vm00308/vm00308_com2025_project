@@ -10,7 +10,10 @@
             <%= link_to gravatar_for(user), user_path(user) %>
             <br>
             <h3> <li> <%= link_to user.username, user_path(user) %> </li> </h3>
-            <h4> <li><small><%= pluralize(user.recipes.count, "recipe") if user.recipes %></small></li> </h4>
+            <h4> <li><small><%= pluralize(user.recipes.count, "recipe") if user.recipes %></small></li> </h4> <br>
+            <% if logged_in? and current_user.admin? %>
+                <li> <%= link_to "Delete this user", user_path(user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger btn-md" %> </li>
+            <% end %>
             <br> <br>
         </ul>
     <% end %>
