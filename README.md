@@ -2,7 +2,8 @@ Web App Name: RecipeList
 
 Author: vm00308
 
-Idea: A site that allows users to sign in so that they can enter recipes for other users to read. Only users who created an        recipe can delete that recipe. An admin user (which is set via the rails console) can delete any user (and thus all          their recipes) and can delete any recipe. Users need to sign up and also be logged in before they can create an              recipe. If the user has an account on gravatar.com, they can set custom avatars for their profile via Gravatar.
+Idea:
+A site that allows users to sign in so that they can enter recipes for other users to read. Only users who created an recipe can delete that recipe. An admin user (which is set via the rails console [heroku run rails console, User.find(user_id).toggle!(:admin)]) can delete any user (and thus all their recipes) and can delete any recipe. Users need to sign up and also be logged in before they can create an recipe. If the user has an account on gravatar.com, they can set custom avatars for their profile via Gravatar.
 
 Ruby Version: ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
 Rails Version: Rails 6.0.1 
