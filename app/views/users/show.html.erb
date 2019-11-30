@@ -12,7 +12,9 @@
 <br>
 
 <div class="container-fluid text-center">
-    <h4> <%= @user.username %>'s <%= pluralize(@user.recipes.count, "recipe") %> </h4>
+    <h4> <%= @user.username %> has <%= pluralize(@user.recipes.count, "recipe") %> </h4>
 </div>
+
+<br>
 
 <%= render 'recipes/recipe', obj: @user.recipes %>
