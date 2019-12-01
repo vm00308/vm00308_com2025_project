@@ -5,11 +5,18 @@
         <%= form_for(@recipe, :html => {role: "form"}) do |r| %>
             <div class = "form-group">
                 <div class = "control-label col-md-2"> <%= r.label :name %> </div>
-                <div class = "col-md-10"> <%= r.text_field :name, class: "form-control", placeholder: "Recipe Name", autofocus: true %> </div>
+                <div class = "col-md-10"> <%= r.text_field :name, class: "form-control", placeholder: "Enter Recipe Name", autofocus: true %> </div>
             </div>
             <div class = "form-group">
                 <div class = "control-label col-md-2"> <%= r.label :description %> </div>
-                <div class = "col-md-10"> <%= r.text_area :description, rows: 30,  class: "form-control", placeholder: "Recipe Description" %> </div>
+                <div class = "col-md-10"> <%= r.text_area :description, rows: 30,  class: "form-control", placeholder: "Enter Recipe Description" %> </div>
+            </div>
+            <div class = "row pl-3">
+                <div class = "col-md-10">
+                    <%= r.collection_check_boxes :category_ids, Category.all, :id, :name do |category| %>
+                        <% category.label(class: "checkbox-inline custom-checkbox pr-5") {category.check_box(class: "checkbox") + category.text} %>
+                    <% end %>
+                </div>
             </div>
             <div class = "form-group">
                 <div class = "col-md-10"> <%= r.submit class: 'btn btn-outline-primary btn-lg' %> </div>

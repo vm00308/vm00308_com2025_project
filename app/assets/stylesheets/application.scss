@@ -62,12 +62,6 @@
     font-size: 19px;
 }
 
-.form-cancel-custom {
-    padding-top: 200px;
-    font-style: italic;
-}
-
-
 .recipe-title{
     padding-top: 15px;
     padding-bottom: 15px;
@@ -111,17 +105,16 @@
     padding-top: 20px;
 }
 
+.custom-checkbox input {
+    width: auto !important;
+}
+
 .main-page-image {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 .error-padding-custom {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.gravatar_logo {
     padding-top: 20px;
     padding-bottom: 20px;
 }

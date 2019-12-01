@@ -8,8 +8,10 @@
                     <div class = "recipe-list-body">
                         <%= truncate(recipe.description, length: 75) %>
                         <div class = "recipe-list-meta">
-                            <small> Created by: <%= link_to recipe.user.username, user_path(recipe.user) %>, <%= time_ago_in_words(recipe.created_at) %> ago | last updated: <%= time_ago_in_words(recipe.updated_at) %> ago </small>
-                            
+                            <h6> Categories: <%= render recipe.categories %> </h6>
+                        </div>
+                        <div class = "recipe-list-meta">
+                            <small> Created by: <%= link_to recipe.user.username, user_path(recipe.user) %>, <%= time_ago_in_words(recipe.created_at) %> ago | last updated: <%= time_ago_in_words(recipe.updated_at) %> ago </small>   
                         </div>
                     </div>
                     <div class = "recipe-list-actions">

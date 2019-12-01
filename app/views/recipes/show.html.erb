@@ -5,7 +5,6 @@
     <ul class = "list-unstyled text-center">
         <h3> <li>By:</li> </h3>
         <br>
-        <%= link_to gravatar_for(@recipe.user), user_path(@recipe.user) %>
         <h3> <li class = "recipe-title"> <%= link_to @recipe.user.username, user_path(@recipe.user) %> </li> </h3> 
         
     </ul>
@@ -13,6 +12,12 @@
     <br>
     <div class = "text-center">
         <div class = "description-wrap"> <%= simple_format(@recipe.description) %> </div>
+        <br>
+        <% if @recipe.categories.any? %>
+
+        <h4> Categories: <%= render @recipe.categories %> </h4>
+
+        <% end %>
         <br> <br> <br>
         <div>
             <%= link_to "Back to Recipe List", recipes_path, class: "btn btn-dark btn-md" %>

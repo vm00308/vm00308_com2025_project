@@ -7,6 +7,9 @@ ruby '2.6.4'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 
+# Rails testing Gem
+gem 'rails-controller-testing', '~> 0.0.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 

@@ -1,16 +1,12 @@
-<div class="container-fluid text-center">
-    <h1 class="display-3"> Listing all Users </h1>
-</div>
+<div class = "text-center recipe-title font-italic"> <h1 class="display-3"> Listing all Users </h1> </div>
 
 <br> <br>
 
 <div class = "container mx-auto text-center">
-<% @all_users.each do |user| %>
+    <% @all_users.each do |user| %>
         <ul class = "list-unstyled">
-            <%= link_to gravatar_for(user), user_path(user) %>
-            <br>
-            <h3> <li> <%= link_to user.username, user_path(user) %> </li> </h3>
-            <h4> <li><small><%= pluralize(user.recipes.count, "recipe") if user.recipes %></small></li> </h4> <br>
+            <h2> <li> <%= link_to user.username, user_path(user) %> </li> </h2>
+            <h5> <li> Has: <%= pluralize(user.recipes.count, "recipe") %> </li> </h5>
             <% if logged_in? and current_user.admin? %>
                 <li> <%= link_to "Delete this user", user_path(user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger btn-md" %> </li>
             <% end %>

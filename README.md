@@ -3,7 +3,7 @@ Web App Name: RecipeList
 Author: vm00308
 
 Idea:
-A site that allows users to sign in so that they can enter recipes for other users to read. Only users who created an recipe can delete that recipe. An admin user (which is set via the rails console [heroku run rails console, User.find(user_id).toggle!(:admin)]) can delete any user (and thus all their recipes) and can delete any recipe. Users need to sign up and also be logged in before they can create an recipe. If the user has an account on gravatar.com, they can set custom avatars for their profile via Gravatar.
+A site that allows users to sign in so that they can enter recipes for other users to read. Only users who created a recipe can edit or delete that recipe. An admin user (which is set via the rails console [heroku run rails console, User.find(user_id).toggle!(:admin)]) can delete any user (and thus all their recipes), any category and any recipe. Users need to sign up and also be logged in before they can create an recipe. Categories can also be linked to an article so that it is easier for users to find certain recipes - however, this is not a requirement.
 
 Ruby Version: ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
 Rails Version: Rails 6.0.1 
@@ -26,5 +26,3 @@ Bootstrap navbar code (edited by vm00308):
 Found on - https://getbootstrap.com/docs/4.0/components/navbar/
 
 VALID_EMAIL_REGEX: https://www.natashatherobot.com/ruby-email-validation-regex/
-
-Gravatar
