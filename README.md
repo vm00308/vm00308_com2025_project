@@ -14,12 +14,11 @@ Git Version: git version 2.22.0.windows.1
 
 Heroku Version: heroku/7.35.0 win32-x64 node-v12.13.0
 
-HerokuApp Link: https://vm00308-com2025-project.herokuapp.com/
+HerokuApp Link: https://vm00308-com2025-project.herokuapp.com
 
 
 References/Resources:
-Home page images:
-- https://i.pinimg.com/originals/3b/fe/5f/3bfe5f4b00c1b1d4606b8c07b2354cef.jpg
+Welcome page images:
 - https://assets.bonappetit.com/photos/57d317f8cba257a52320dac2/master/w_1200,c_limit/gjusta-main.jpg
 
 Bootstrap navbar code (edited by vm00308):
