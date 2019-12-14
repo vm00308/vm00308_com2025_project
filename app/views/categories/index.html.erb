@@ -1,4 +1,4 @@
-<div class = "text-center recipe-title font-italic"> <h1 class="display-3"> Listing all Categories </h1> </div>
+<div class = "text-center recipe-title font-italic"> <h1 class="display-2"> <%= t('categories.index.title') %> </h1> </div>
 
 <br> <br>
 
@@ -8,9 +8,9 @@
             <h2> <li> <%= link_to category.name, category_path(category) %> </li> </h2>
             <h5> <li> Has: <%= pluralize(category.recipes.count, "recipe") %> </li> </h5>
             <% if logged_in? and current_user.admin? %>
-                <li> <%= link_to "Edit this category", edit_category_path(category), class: "btn btn-primary btn-md" %> </li>
+                <li> <%= link_to t('edit_recipe_button'), edit_category_path(category), class: "btn btn-primary btn-md" %> </li>
                 <br>
-                <li> <%= link_to "Delete this category", category_path(category), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-md" %> </li>
+                <li> <%= link_to t('delete_recipe_button'), category_path(category), method: :delete, data: {confirm: t('delete_category_text')}, class: "btn btn-danger btn-md" %> </li>
             <% end %>
             <br>
         </ul>

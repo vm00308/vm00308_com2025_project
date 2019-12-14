@@ -1,6 +1,4 @@
-<div class="container-fluid text-center">
-    <h1 class="display-3"> Log In to RecipeList.com! </h1>
-</div>
+<div class="container-fluid text-center"> <h1 class="display-3"> <%= t('sessions.new.title') %> </h1> </div>
 <br> <br> <br>
 <%= form_for(:session, :html => {role: "form"}, url: login_path) do |s| %>
     <div class = "form-group">

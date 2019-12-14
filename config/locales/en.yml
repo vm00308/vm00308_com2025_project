@@ -30,4 +30,76 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  # Button texts
+  show_recipe_button: "Show this recipe"
+  edit_recipe_button: "Edit this recipe"
+  delete_recipe_button: "Delete this recipe"
+  back_to_recipe_list_button: "Back to recipe list"
+
+  # Delete confirmation texts
+  delete_recipe_text: "Are you sure you want to delete this recipe?"
+  delete_user_text: "Are you sure you want to delete this user?"
+  delete_category_text: "Are you sure you want to delete this category?"
+
+  # Footer texts
+  footer:
+    about: "About"
+    contact: "Contact Us"
+
+  # Navbar texts
+  navbar:
+    signup: "Sign Up"
+    login: "Log In"
+    logout: "Log Out"
+    list_recipes: "List of Recipes"
+    list_users: "List of Users"
+    list_categories: "List of Categories"
+    new_category: "Create new Category"
+    new_recipe: "Create new Recipe"
+    view_profile: "View your Profile"
+    edit_profile: "Edit your Profile"
+
+  # Text on welcome views - home page, about page
+  welcome:
+    home:
+      title: "Welcome to RecipeList.com!"
+      signup_text: "Before you can create your own recipes and share with everyone, "
+      login_text: "If you have already signed up, "
+    about:
+      title: "About RecipeList.com"
+      info_text: "RecipeList is a site where users can sign up and create recipes that is shared with everyone."
+      instructions_text: "Users will need to go through a quick sign up process before they can create recipes. Once signed up and logged in, users can edit or delete their recipes as well as their profile. Recipes can be categorised when being created so it is easier for other users to find certain recipes - however, this is not required."
+      closing_text: "I hope you enjoy RecipeList.com! "
+
+  # Text on recipes views
+  recipes:
+    index:
+      title: "Listing All Recipes"
+    new:
+      title: "Create New Recipe"
+    edit:
+      title: "Edit This Recipe"
+
+  # Text on users views
+  users:
+    index:
+      title: "Listing All Users"
+    new:
+      title: "Sign Up to RecipeList.com!"
+    edit:
+      title: "Edit Your Account Details"
+
+  # Text on categories views
+  categories:
+    index:
+      title: "Listing All Categories"
+    new:
+      title: "Create New Category"
+    edit:
+      title: "Edit This Category"
+
+  # Text on sessions view
+  sessions:
+    new:
+      title: "Log In to RecipeList.com!"

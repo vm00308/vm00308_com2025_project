@@ -1,14 +1,12 @@
-<div class="jumbotron container-fluid text-center">
-    <h1 class="display-1 font-italic"> Welcome to RecipeList.com! </h1>
-</div>
+<div class="jumbotron container-fluid text-center"> <h1 class="display-1 font-italic"> <%= t('welcome.home.title') %> </h1> </div>
 
 <div class="container-fluid text-center">
 
     <% if logged_in? %>
         <h3 class="display-4" > Hello <%= current_user.username %>! </h3>
     <% else %>
-      <h3 class="display-3" > Before you can create your own recipes and share with everyone, <%= link_to "Sign Up!", signup_path %> </h3> <br> <br>
-      <h3 class="display-4" > If you have already signed up, <%= link_to "Log In!", login_path %> </h3>
+      <h3 class="display-3" > <%= t('welcome.home.signup_text') %> <%= link_to "Sign Up!", signup_path %> </h3> <br> <br>
+      <h3 class="display-4" > <%= t('welcome.home.login_text') %> <%= link_to "Log In!", login_path %> </h3>
     <% end %> 
 
     <div class = "welcome-page-image">

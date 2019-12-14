@@ -6,8 +6,8 @@
                 <% if logged_in? && current_user.admin? %>
                     <li class="list-inline-item nav-item">Logged in as <strong> Admin </strong> </li>
                 <% end %>
-                <li class="list-inline-item nav-item"> <%= link_to "About", about_path, class: "nav-custom-link" %> </li>
-                <li class=" list-inline-item nav-item pl-3"> <%= link_to "Contact Us", '#', class: "nav-custom-link" %> </li>
+                <li class="list-inline-item nav-item pl-5"> <%= link_to t('footer.about'), about_path, class: "nav-custom-link" %> </li>
+                <li class=" list-inline-item nav-item pl-3"> <%= link_to t('footer.contact'), '#', class: "nav-custom-link" %> </li>
             </ul>
         </nav>
     </footer>
