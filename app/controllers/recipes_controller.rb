@@ -17,13 +17,13 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe.destroy
-    flash[:danger] = "Recipe was successfully deleted!"
+    flash[:danger] = t('recipes_controller_texts.flash_destroy')
     redirect_to recipes_path
   end
 
   def update
     if(@recipe.update(recipe_params))
-      flash[:primary] = "Recipe was successfully updated!"
+      flash[:primary] = t('recipes_controller_texts.flash_update')
       redirect_to recipe_path(@recipe)
     else
       render 'edit'
@@ -37,7 +37,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
     if(@recipe.save)
-      flash[:success] = "Recipe was successfully created!"
+      flash[:success] = t('recipes_controller_texts.flash_create')
       redirect_to recipe_path(@recipe)
     else
       render 'new'
@@ -55,7 +55,7 @@ class RecipesController < ApplicationController
 
   def require_same_user
     if current_user != @recipe.user and !current_user.admin?
-      flash[:danger] = "You can only edit or delete your own recipe!"
+      flash[:danger] = t('recipes_controller_texts.flash_require_same_user')
       redirect_to root_path
     end
   end

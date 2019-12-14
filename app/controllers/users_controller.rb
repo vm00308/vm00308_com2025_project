@@ -13,13 +13,12 @@ class UsersController < ApplicationController
   end
 
   def edit
-
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:danger] = "User and all their recipes have been destroyed!"
+    flash[:danger] = t('users_controller_texts.flash_destroy')
     redirect_to users_path
   end
 
@@ -58,14 +57,14 @@ class UsersController < ApplicationController
 
   def require_same_user
     if current_user != @user and !current_user.admin?
-      flash[:danger] = "You can only edit or delete your own account!"
+      flash[:danger] = t('users_controller_texts.flash_require_same_user')
       redirect_to root_path
     end
   end
   
   def require_admin
     if logged_in? and !current_user.admin?
-      flash[:danger] = "You are not an admin! Only admins can perfom that action!"
+      flash[:danger] = t('users_controller_texts.flash_require_admin')
       redirect_to root_path
     end
   end
