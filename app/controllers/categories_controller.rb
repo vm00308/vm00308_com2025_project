@@ -44,6 +44,8 @@ class CategoriesController < ApplicationController
   end
 
   private
+
+  # Making sure that category name is permitted
   def category_params
     params.require(:category).permit(:name)
   end
@@ -52,6 +54,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   end
   
+  # Restricting actions so only admin users can perform it
   def require_admin_user
     if !(logged_in? and current_user.admin?)
       flash[:danger] = t('categories_controller_texts.flash_require_admin_user')

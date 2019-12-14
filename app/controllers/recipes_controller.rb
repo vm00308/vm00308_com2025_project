@@ -44,7 +44,9 @@ class RecipesController < ApplicationController
     end
   end
 
-  private 
+  private
+
+  # Making sure that recipe name, description and any categories are permitted
   def recipe_params
     params.require(:recipe).permit(:name, :description, category_ids: [])
   end
@@ -53,6 +55,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
+  # Restricting actions so only users who created an recipe can edit or destroy that recipe
   def require_same_user
     if current_user != @recipe.user and !current_user.admin?
       flash[:danger] = t('recipes_controller_texts.flash_require_same_user')

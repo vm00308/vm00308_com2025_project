@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :set_user, only: [:edit, :update, :show]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :require_same_user, only: [:edit, :update]
   before_action :require_admin, only: [:destroy]
 
   def index
@@ -47,6 +47,8 @@ class UsersController < ApplicationController
   end
 
   private
+
+  # Making sure that username, email and password are permitted
   def user_params
     params.require(:user).permit(:username, :email, :password)
   end
@@ -55,6 +57,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  # Restricting actions so only users who created an account can edit that account
   def require_same_user
     if current_user != @user and !current_user.admin?
       flash[:danger] = t('users_controller_texts.flash_require_same_user')
@@ -62,6 +65,7 @@ class UsersController < ApplicationController
     end
   end
   
+  # Restricting actions so only admin users can delete any users
   def require_admin
     if logged_in? and !current_user.admin?
       flash[:danger] = t('users_controller_texts.flash_require_admin')
