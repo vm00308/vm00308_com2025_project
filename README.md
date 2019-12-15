@@ -8,7 +8,9 @@ A site that allows users to sign in so that they can enter recipes for other use
 Ruby Version: ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
 Rails Version: Rails 6.0.1 
  
-Reason for using this version of Ruby on Rails - I attempted using different version of Rails on another system, even doing a clean reset of Windows 10 because none of the versions were working. Initially, when creating an application, I had issues with the sqlite3 gem. After using different versions of Ruby and Rails, I got errors in regards to the bootsnap gem. All of my troubleshooting did not work, therefore I had to use the only version of RoR that worked. 
+Reason for using this version of Ruby on Rails - I attempted using different version of Rails on another system, even doing a clean reset of Windows 10 because none of the versions were working. Initially, when creating an application, I had issues with the sqlite3 gem. After using different versions of Ruby and Rails, I got errors in regards to the bootsnap gem. All of my troubleshooting did not work, therefore I had to use the only version of RoR that worked.
+
+Regarding jQuery - After trying multiple methods both shown in the labs/lectures and online troubleshooting, I have been unable to successfully implement jQuery without breaking most of my other features. I am not sure if it is due to the version of Ruby and or Rails that I am using but nothing solved the issue. I even tried the client_side_validations gem but it only showed error messages after submitting the request, which defeats the point of client side validation.
 
 Git Version: git version 2.22.0.windows.1
 
