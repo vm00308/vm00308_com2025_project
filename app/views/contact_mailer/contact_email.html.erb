@@ -1,0 +1,22 @@
+<div class = "font-italic">
+    <h3> <%= t('contact_mailer_texts.mailer_header') %> </h3>
+    <h4> <%= t('contact_mailer_texts.mailer_info') %> </h4>
+
+    <br>
+
+    <dl>
+        <dt> Email: </dt>
+        <dd> <%= @email %> </dd>
+        <br>
+        <dt> Message: </dt>
+        <dd> <%= @message %> </dd>
+    </dl>
+
+    <p> Thanks, </p>
+    <p> <%= @email %> </p>
+
+    <br>
+
+    <h4> <%= t('contact_mailer_texts.mailer_end_text') %> </h4>
+
+</div>

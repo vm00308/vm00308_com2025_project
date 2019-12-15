@@ -58,11 +58,21 @@ en:
   sessions_controller_texts:
     flash_create_success: "You have successfully logged in!"
     flash_create_danger: "There was something wrong with the log in attempt!"
-    flash_destory: "You have successfully logged out!"
+    flash_destroy: "You have successfully logged out!"
   users_controller_texts:
     flash_destroy: "User and all their recipes have been destroyed!"
     flash_require_same_user: "You can only edit or delete your own account!"
-    flash_require_admin: "You are not an admin! Only admins can perfom that action!"
+    flash_require_admin: "You are not an admin! Only admins can perform that action!"
+  welcome_controller_texts:
+    flash_blank_email: "The email field cannot be left empty!"
+    flash_blank_message: "The message field cannot be left empty!"
+    flash_contact_success: "The message has been successfully sent! We will contact you soon."
+
+  # Contact mailer texts
+  contact_mailer_texts:
+    mailer_header: "Dear Admin,"
+    mailer_info: "Please read the message below sent by a user/visitor to RecipeList.com."
+    mailer_end_text: "That is the end of the message."
 
   # Footer texts
   footer:
@@ -92,7 +102,11 @@ en:
       title: "About RecipeList.com"
       info_text: "RecipeList is a site where users can sign up and create recipes that is shared with everyone."
       instructions_text: "Users will need to go through a quick sign up process before they can create recipes. Once signed up and logged in, users can edit or delete their recipes as well as their profile. Recipes can be categorised when being created so it is easier for other users to find certain recipes - however, this is not required."
-      closing_text: "I hope you enjoy RecipeList.com! "
+      closing_text: "I hope you enjoy RecipeList.com!"
+    contact:
+      title: "Contact Us"
+      info_text: "Please complete the form below to send us any suggestions for RecipeList.com and to get in touch with us!"
+
 
   # Text on recipes views
   recipes:

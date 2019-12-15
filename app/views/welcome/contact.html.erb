@@ -1,0 +1,25 @@
+<div class="container-fluid text-center"> <h1 class="display-2"> <%= t('welcome.contact.title') %> </h1> </div>
+<br> <br>
+<div class="container-fluid text-center">
+    <h3 class="font-italic word-wrap"> <%= t('welcome.contact.info_text') %> </h3>
+</div>
+<br> <br> <br>
+<%= form_tag request_contact_path, method: 'post', :class => 'form-group' do  %>
+    <div class = "form-group">
+        <div class = "control-label col-md-2"> <%= label_tag :email %> </div>
+        <div class = "col-md-10">
+            <%= email_field_tag :email, '', placeholder: "Enter Email", autofocus: true, :class => 'form-control' %>
+        </div>
+    </div>
+    <div class = "form-group">
+        <div class = "control-label col-md-2"> <%= label_tag :message %> </div>
+        <div class = "col-md-10">
+            <%= text_area_tag :message, '', placeholder: "Enter Message", rows: 10, :class => 'form-control' %>
+        </div>
+    </div>
+    <div class = "form-group">
+        <div class = "col-md-10">
+            <%= submit_tag "Contact Us!", class: 'btn btn-outline-primary btn-lg' %>
+        </div>
+    </div>
+<% end %>

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
     root 'welcome#home'
     get 'about', to: 'welcome#about'
+    get 'contact', to: 'welcome#contact'
+    post 'request_contact', to: 'welcome#request_contact'
 
     resources :recipes
 
