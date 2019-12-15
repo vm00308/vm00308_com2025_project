@@ -16,6 +16,8 @@ Heroku Version: heroku/7.35.0 win32-x64 node-v12.13.0
 
 HerokuApp Link: https://vm00308-com2025-project.herokuapp.com
 
+NOTE: There is a 500 Internal Server Error when using the contact form on the heroku link - This is might be due to Heroku using a different mail system than SMTP or it might be a timeout error. If you check heroku logs however, it seems that it goes through.
+
 
 References/Resources:
 Welcome page images:
