@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
   def contact
   end
 
+  # Method to handle contact form submission
   def request_contact
     email = params[:email]
     message = params[:message]
