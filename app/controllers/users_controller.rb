@@ -59,7 +59,7 @@ class UsersController < ApplicationController
 
   # Restricting actions so only users who created an account can edit that account
   def require_same_user
-    if current_user != @user and !current_user.admin?
+    if current_user != @user
       flash[:danger] = t('users_controller_texts.flash_require_same_user')
       redirect_to root_path
     end
