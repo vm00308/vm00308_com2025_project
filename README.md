@@ -12,6 +12,8 @@ Reason for using this version of Ruby on Rails - I attempted using different ver
 
 Regarding jQuery - After trying multiple methods both shown in the labs/lectures and online troubleshooting, I have been unable to successfully implement jQuery without breaking most of my other features. I am not sure if it is due to the version of Ruby and or Rails that I am using but nothing solved the issue. I even tried the client_side_validations gem but it only showed error messages after submitting the request, which defeats the point of client side validation.
 
+Regarding the tests - I have followed the same testing ways as in the slides but some of the tests do not work for some reason. I have not been able to successfully troubleshoot it. One of the errors I encountered was the SQLite3::BusyException: database is locked, for which no online solutions worked. If you run rails test, let it finish and then run rails test again without adding any code, sometimes the errors and or failures number changes - I have no idea why.
+
 Git Version: git version 2.22.0.windows.1
 
 Heroku Version: heroku/7.35.0 win32-x64 node-v12.13.0
